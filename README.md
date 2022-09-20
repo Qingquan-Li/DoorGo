@@ -1,4 +1,28 @@
-## Create a React Native project with Expo
+# How to run this project
+
+### 1. Download the code
+
+Download and then open the code on an IDE (e.g., VSCode).
+
+### 2. Install dependencies
+On the terminal, in the project root directory,
+run `npm install` or `npx expo install`
+to install dependencies.
+
+Note: The `npx expo install` command will pick a version of the library that is compatible with your project and then use your JavaScript package manager (such as npm) to install it.
+
+### 3. Run the project
+On the terminal, in the project root directory, run:
+```bash
+expo start
+```
+or:
+```bash
+npm start
+```
+
+
+# Create a new React Native project with Expo
 
 1. Install Node.js
 
@@ -25,11 +49,4 @@ Install and update packages that work with the version of react-native in your p
 
 ```bash
 $ npx expo install package-name
-```
-
-## Run the project
-
-```bash
-$ cd DoorFrontApp
-$ npm start
 ```
