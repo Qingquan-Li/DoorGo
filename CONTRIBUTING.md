@@ -9,7 +9,7 @@
 
 1. Fork the owner's repo (upstream)
 
-   The the original(owner) repo should include 2 branches: main(master), dev
+   The original(owner) repo should include 2 branches: main(master), dev
 
    - main(master) branch for production
    - dev branch for development
