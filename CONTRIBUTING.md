@@ -16,7 +16,7 @@
 
 2. `git clone` your forked(origin) repo to local
 
-3. `git remote add upstream <repo-url>`
+3. Specify the remote upstream(original) repository that will be synced with the fork: `git remote add upstream <repo-url>`
 
 4. `git checkout -b` a new feature branch
 
