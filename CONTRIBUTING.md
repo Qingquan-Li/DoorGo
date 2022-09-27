@@ -22,9 +22,9 @@
 
 5. Update the code and `git commit`
 
-6. `git pull upstream dev`
+6. Fetch and merge the code from upstream/dev: `git pull upstream dev`
 
-7.  `git push` the modified code
+7. `git push` the modified code
 
 8. Create pull request on GitHub, origin/feature -> upstream/dev
 
