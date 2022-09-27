@@ -1,3 +1,15 @@
+# Tech Stack
+
+- Front-end (client-side)
+  - TypeScript (JavaScript)
+  - React Native (Create Android/iOS apps using React)
+  - Expo (A set of tools and services built around React Native)
+  - React Navigation (Routing and navigation for React Native apps)
+  - Redux (A Predictable State Container )
+- Back-end
+  - Firebase (for authentication and data storage)
+
+
 # How to run this project
 
 ### 1. Download the code
@@ -14,7 +26,7 @@ Note: The `npx expo install` command will pick a version of the library that is 
 ### 3. Run the project
 On the terminal, in the project root directory, run:
 ```bash
-expo start
+npx expo start
 ```
 or:
 ```bash
