@@ -22,7 +22,7 @@
 
 5. Update the code and `git commit`
 
-6. `git pull upstream/dev`
+6. `git pull upstream dev`
 
 7.  `git push` the modified code
 
