@@ -1,13 +1,17 @@
-import { StyleSheet, Text, View } from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Button,
+} from 'react-native';
+
+import AppIntro from '../components/AppIntro';
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>App Intro</Text>
+      <AppIntro />
       <View style={styles.separator} />
-      <Text>What is this app?</Text>
-      <Text></Text>
-      <Text>How to use it?</Text>
+      <Button title='Button: Take a photo for an entrance' />
     </View>
   );
 }
@@ -18,10 +22,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     // backgroundColor: '#fff',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
   },
   separator: {
     marginVertical: 30,
