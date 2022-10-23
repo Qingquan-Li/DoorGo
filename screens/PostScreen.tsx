@@ -5,6 +5,8 @@ import {
   Button,
 } from 'react-native';
 
+import doAlert from '../utils/doAlert';
+
 export default function PostScreen() {
   return (
     <View style={styles.container}>
@@ -13,7 +15,10 @@ export default function PostScreen() {
       <Text>allow access to your camera and location.</Text>
       <Text></Text>
       <Text></Text>
-      <Button title='Open settings' />
+      <Button
+        title='Open settings'
+        onPress={() => doAlert()}
+      />
     </View>
   );
 }
