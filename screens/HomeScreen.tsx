@@ -5,13 +5,17 @@ import {
 } from 'react-native';
 
 import AppIntro from '../components/AppIntro';
+import doAlert from '../utils/doAlert';
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <AppIntro />
       <View style={styles.separator} />
-      <Button title='Button: Take a photo for an entrance' />
+      <Button
+        title='Button: Take a photo for an entrance'
+        onPress={() => doAlert()}
+      />
     </View>
   );
 }

@@ -5,6 +5,8 @@ import {
   Button,
 } from 'react-native';
 
+import doAlert from '../utils/doAlert';
+
 // import { NativeStackHeaderProps } from '@react-navigation/native-stack';
 // export default function ProfileScreen({ navigation }: NativeStackHeaderProps) {
 export default function ProfileScreen({ navigation }: any) {
@@ -22,10 +24,22 @@ export default function ProfileScreen({ navigation }: any) {
       <Text></Text>
       <View style={styles.separator} />
       <Text></Text>
-      <Button title='Feedback >' />
-      <Button title='About Us >' />
-      <Button title='Terms of Service >' />
-      <Button title='Privacy Policy >' />
+      <Button
+        title='Feedback >'
+        onPress={() => doAlert()}
+      />
+      <Button
+        title='About Us >'
+        onPress={() => doAlert()}
+      />
+      <Button
+        title='Terms of Service >'
+        onPress={() => doAlert()}
+      />
+      <Button
+        title='Privacy Policy >'
+        onPress={() => doAlert()}
+      />
     </View>
   );
 }
