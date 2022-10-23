@@ -12,8 +12,12 @@ export default function ProfileScreen({ navigation }: any) {
     <View style={styles.container}>
       <Text style={styles.title}>My account</Text>
       <Button
-        title='Button: Sign up'
+        title='Sign up'
         onPress={() => navigation.navigate('SignUp')}
+      />
+      <Button
+        title='Log in'
+        onPress={() => navigation.navigate('LogIn')}
       />
       <Text></Text>
       <View style={styles.separator} />

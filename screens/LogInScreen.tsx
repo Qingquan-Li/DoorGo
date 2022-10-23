@@ -5,16 +5,16 @@ import {
 } from 'react-native';
 import { Link } from '@react-navigation/native';
 
-import SignUpForm from '../components/SignUpForm';
+import LogInForm from '../components/LogInForm';
 
-export default function SignUpScreen() {
+export default function LogInScreen() {
   return (
     <View style={styles.container}>
-      <SignUpForm />
+      <LogInForm />
       <View style={styles.separator} />
-        <Link to={{ screen: 'LogIn' }}>
-          Have an account already?
-          <Text style={styles.logIn}> Log in</Text>
+        <Link to={{ screen: 'SignUp' }}>
+          Don't have an account?
+          <Text style={styles.signUp}> Sign up</Text>
         </Link>
     </View>
   );
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     width: '80%',
     backgroundColor: '#DCDCDC',
   },
-  logIn: {
+  signUp: {
     fontWeight: 'bold',
-  }
+  },
 });
