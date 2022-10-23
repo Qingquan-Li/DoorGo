@@ -1,8 +1,13 @@
 # Contributing to DoorGo
 
+References:
+- https://docs.github.com/en/get-started/quickstart/contributing-to-projects
+- https://www.freecodecamp.org/news/how-to-use-git-and-github-in-a-team-like-a-pro/
+
 ## Git Workflow
 
 ![GIt-Workflow-Diagram](https://user-images.githubusercontent.com/19491358/192397626-4435f01b-9b95-4245-a8a5-c85e2aa924b8.png)
+
 (source: http://www.davidgw.com/git-workflow-model/)
 
 ## Steps
