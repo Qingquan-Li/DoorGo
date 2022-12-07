@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import HomeScreen from '../screens/HomeScreen';
 import PostScreen from '../screens/PostScreen';
@@ -8,6 +9,9 @@ import ProfileScreen from '../screens/Profile';
 import SignUpScreen from '../screens/SignUpScreen';
 import LogInScreen from '../screens/LogInScreen';
 import CameraP from '../screens/Camera';
+import Knob from '../screens/KnobLabel';
+import Door from '../screens/DoorLabel';
+import Misc from '../screens/Misc';
 
 const ProfileStack = createNativeStackNavigator();
 
@@ -45,12 +49,36 @@ const CamNav = createNativeStackNavigator();
 function CameraStackNav()
 {
   return (
-    <CamNav.Navigator>
+    <CamNav.Navigator
+      
+    >
+
+    <CamNav.Screen
+        name='Post'
+        component={PostScreen}
+        options={{ headerShown: false }}
+      />
       <CamNav.Screen
         name='CameraP'
         component={CameraP}
         options={{ headerShown: false }}
       />
+      <CamNav.Screen
+        name='Knob'
+        component={Knob}
+        options={{ headerShown: false }}
+      />
+      <CamNav.Screen
+        name='Door'
+        component={Door}
+        options={{ headerShown: false }}
+      />
+      <CamNav.Screen
+        name='Misc'
+        component={Misc}
+        options={{ headerShown: false }}
+      />
+      
     </CamNav.Navigator>
   )
 }

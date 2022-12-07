@@ -5,7 +5,8 @@ import { shareAsync } from 'expo-sharing';
 import * as MediaLibrary from 'expo-media-library';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-//there is a bug: it skips the postscreen for some reason and i don't understand why
+//could make global styles to reuse instead of repetitive code
+//logic for none or ommit? ask jake
 
 
 export default function CameraP({navigation}: {navigation: any}) {
@@ -77,10 +78,10 @@ export default function CameraP({navigation}: {navigation: any}) {
           })
       };
 
-      // let proceedToLabel = () => {
-      //   navigation.navigate('Door')
-      //   
-      // }
+      let proceedToKnobLabel = () => {
+        navigation.navigate('Knob')
+        
+      }
 
       return (
           <SafeAreaView style={styles.container}>
@@ -88,7 +89,7 @@ export default function CameraP({navigation}: {navigation: any}) {
               {/* <Button title={"share"} onPress={sharePic}/> */}
               {/* {hasMediaPermission ? <Button title={"Save"} onPress={savePhoto}/> : undefined} */}
               <Button title={"Discard"} onPress={()=> setPhoto(undefined) }/>
-              <Button title={"Next"} /* onPress={proceedToLabel}*/ />
+              <Button title={"Next"}  onPress={proceedToKnobLabel} />
           </SafeAreaView>
       );
   }
@@ -97,7 +98,7 @@ return (
   <View style={styles.container}>
     <Camera style={styles.camera} type={type} ref={cameraRef}>
         <View style={styles.container}>
-            <TouchableOpacity style={styles.touchable} onPress={takePicture} /*and then navigate to attributes*//>
+            <TouchableOpacity style={styles.takePicButton} onPress={takePicture} /*and then navigate to attributes*//>
             <TouchableOpacity style={styles.flipButton} onPress={toggleCameraType}/>
             {/* <TouchableOpacity style={styles.goBackButton} onPress={goBack} /> */}
                 {/* ideally insert icon here but ill let the letter T represent it */}
@@ -119,14 +120,16 @@ const styles = StyleSheet.create({
       flex: 1,
     },
   
-    touchable: {
+    takePicButton: {
       marginTop: 'auto',
       justifyContent: 'space-between',
       alignSelf: 'center',
       height: 50,
       width: 50,
       borderRadius: 35,
-      backgroundColor: '#ffffffee',
+      backgroundColor: '#ffffffff',
+      borderWidth: 3,
+      borderColor: '#555555'
     },
   
     text: {

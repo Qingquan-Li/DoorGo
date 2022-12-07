@@ -7,12 +7,14 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+import CustomButton from '../components/customPostButton';
 import doAlert from '../utils/doAlert';
 
 export default function PostScreen( {navigation}: any ) {
 
   const onPressHandler = () => {
     navigation.navigate('CameraP')
+  
   }
 
   return (
@@ -22,13 +24,19 @@ export default function PostScreen( {navigation}: any ) {
       <Text>allow access to your camera and location.</Text>
       <Text></Text>
       <Text></Text>
-      <TouchableOpacity
+      {/* <TouchableOpacity
         style={styles.button}
         onPress={onPressHandler}
       >
         <Text style={styles.buttonText}>Take picture</Text>
 
-      </TouchableOpacity>
+      </TouchableOpacity> */}
+
+      <CustomButton 
+        onPress={onPressHandler}
+        title={"Take a Photo"}
+      
+      />
     
     </View>
   );
@@ -54,6 +62,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 10,
+    alignSelf: 'center'
 
   },
 
