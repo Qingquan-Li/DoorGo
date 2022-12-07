@@ -7,6 +7,7 @@ import PostScreen from '../screens/PostScreen';
 import ProfileScreen from '../screens/Profile';
 import SignUpScreen from '../screens/SignUpScreen';
 import LogInScreen from '../screens/LogInScreen';
+import CameraP from '../screens/Camera';
 
 const ProfileStack = createNativeStackNavigator();
 
@@ -39,6 +40,22 @@ function ProfileStackScreen() {
   )
 }
 
+const CamNav = createNativeStackNavigator();
+
+function CameraStackNav()
+{
+  return (
+    <CamNav.Navigator>
+      <CamNav.Screen
+        name='CameraP'
+        component={CameraP}
+        options={{ headerShown: false }}
+      />
+    </CamNav.Navigator>
+  )
+}
+
+
 const Tab = createBottomTabNavigator();
 
 export default function Navigation() {
@@ -46,7 +63,11 @@ export default function Navigation() {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Post" component={PostScreen} />
+        <Tab.Screen 
+          name="Post" 
+          component={CameraStackNav} 
+          options={{ headerShown: false }}
+          />
         <Tab.Screen
           name="Profile"
           component={ProfileStackScreen}
