@@ -1,21 +1,13 @@
-import { NavigationHelpersContext } from '@react-navigation/native';
-import {
-  StyleSheet,
-  Text,
-  View,
-  Button,
-  TouchableOpacity,
-} from 'react-native';
+import { NavigationHelpersContext } from "@react-navigation/native";
+import { StyleSheet, Text, View, Button, TouchableOpacity } from "react-native";
 
-import CustomButton from '../components/customPostButton';
-import doAlert from '../utils/doAlert';
+import CustomButton from "../components/customPostButton";
+import doAlert from "../utils/doAlert";
 
-export default function PostScreen( {navigation}: any ) {
-
+export default function PostScreen({ navigation }: any) {
   const onPressHandler = () => {
-    navigation.navigate('CameraP')
-  
-  }
+    navigation.navigate("CameraP");
+  };
 
   return (
     <View style={styles.container}>
@@ -32,12 +24,7 @@ export default function PostScreen( {navigation}: any ) {
 
       </TouchableOpacity> */}
 
-      <CustomButton 
-        onPress={onPressHandler}
-        title={"Take a Photo"}
-      
-      />
-    
+      <CustomButton onPress={onPressHandler} title={"Take a Photo"} />
     </View>
   );
 }
@@ -45,36 +32,34 @@ export default function PostScreen( {navigation}: any ) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: "center",
     marginTop: 80,
     // backgroundColor: '#fff',
   },
 
   title: {
     fontSize: 40,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 
   buttonText: {
-    color: '#ffffff',
+    color: "#ffffff",
     fontSize: 20,
-    fontWeight: 'bold',
-    alignItems: 'center',
-    justifyContent: 'center',
+    fontWeight: "bold",
+    alignItems: "center",
+    justifyContent: "center",
     marginTop: 10,
-    alignSelf: 'center'
-
+    alignSelf: "center",
   },
 
   button: {
     width: 300,
     height: 50,
-    backgroundColor: '#000000',
-    alignItems: 'center',
+    backgroundColor: "#000000",
+    alignItems: "center",
     borderRadius: 5,
-    position: 'absolute',
+    position: "absolute",
     bottom: 5,
     marginBottom: 20,
-    
   },
 });
