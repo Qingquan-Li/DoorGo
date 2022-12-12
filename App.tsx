@@ -5,10 +5,12 @@ import Knob from "./screens/KnobLabel"; //for testing before implementing with n
 import Door from "./screens/DoorLabel"; //^
 import Misc from "./screens/Misc"; //^
 import PostScreen from "./screens/PostScreen"; //^
+import Locations from "./screens/Locations";
 
 export default function App() {
   return (
     <Navigation />
+    //<Locations navigation={undefined}/>
     //<PostScreen/>
     //<Door/>
   );

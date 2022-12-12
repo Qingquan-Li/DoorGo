@@ -13,7 +13,7 @@ export default function PostScreen({ navigation }: any) {
     <View style={styles.container}>
       <Text style={styles.title}>To take a photo</Text>
       <Text></Text>
-      <Text>allow access to your camera and location.</Text>
+      <Text>Allow access to your camera and location</Text>
       <Text></Text>
       <Text></Text>
       {/* <TouchableOpacity

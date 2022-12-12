@@ -7,6 +7,10 @@ export default function Misc({ navigation }: { navigation: any }) {
   const [hasRamp, setHasRamp] = useState<boolean>(false);
   const [hasSteps, setHasSteps] = useState<boolean>(false);
 
+  let proceedToLocations = () => {
+    navigation.navigate("Location");
+  };
+
   return (
     <View style={styles.container}>
       <Pressable onPress={() => navigation.pop(1)}>
@@ -34,7 +38,7 @@ export default function Misc({ navigation }: { navigation: any }) {
         />
         <Text style={styles.paragraph}>Steps</Text>
       </View>
-      <CustomButton title={"Submit"} onPress={() => null} />
+      <CustomButton title={"Next"} onPress={proceedToLocations} />
     </View>
   );
 }
@@ -67,7 +71,7 @@ const styles = StyleSheet.create({
   },
 
   backButton: {
-    marginLeft: 10,
+    marginLeft: 15,
     color: "#0055b3",
     fontSize: 20,
     fontWeight: "300",

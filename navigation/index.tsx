@@ -12,6 +12,7 @@ import CameraP from "../screens/Camera";
 import Knob from "../screens/KnobLabel";
 import Door from "../screens/DoorLabel";
 import Misc from "../screens/Misc";
+import Locations from "../screens/Locations";
 
 const ProfileStack = createNativeStackNavigator();
 
@@ -50,7 +51,7 @@ const CamNav = createNativeStackNavigator();
 function CameraStackNav() {
   return (
     <CamNav.Navigator>
-      <CamNav.Screen                      
+      <CamNav.Screen
         name="PostScreen"
         component={PostScreen}
         options={{ headerShown: false }}
@@ -73,6 +74,11 @@ function CameraStackNav() {
       <CamNav.Screen
         name="Misc"
         component={Misc}
+        options={{ headerShown: false }}
+      />
+      <CamNav.Screen
+        name="Location"
+        component={Locations}
         options={{ headerShown: false }}
       />
     </CamNav.Navigator>
